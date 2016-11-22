@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Project ROOT  -->
-<project name="okuyama" default="package" basedir=".">
+<project name="okuyama" default="compile" basedir=".">
 	<property name="project.title"  value="okuyama" />
 	<property name="doc.dir"		value="doc" />
 	<property name="src.dir"		value="src" />

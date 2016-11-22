@@ -53,7 +53,7 @@ public class BufferedDataStoredMap extends Thread {
                     // [0] = type(1=put, 2=remove), [1]=DataType(1=byte, 2=String, 3=Object), [2]=Key, [3]=Value
 
                     while (true) {
-                        requestData = (Object[])this.storeRequestQueue.poll(1000, TimeUnit.MILLISECONDS);
+//                        requestData = (Object[])this.storeRequestQueue.poll(1000, TimeUnit.MILLISECONDS);
 
                         if (requestData != null) break;
                         if (OkuyamaFilesystem.jvmShutdownStatus == true) break;
@@ -62,7 +62,7 @@ public class BufferedDataStoredMap extends Thread {
                     if (requestData == null && OkuyamaFilesystem.jvmShutdownStatus == true) break;
                     if (DelayStoreDaemon.nowQueueJob.get() > 0) DelayStoreDaemon.nowQueueJob.decrementAndGet();
                 }
-                Object[] request = storeRequestQueue.
+//                Object[] request = storeRequestQueue.
             } catch (Exception e) {
                 e.printStackTrace();
             }

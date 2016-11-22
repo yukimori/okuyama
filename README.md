@@ -1,0 +1,17 @@
+# install
+fork/cloneした後にgeneralプロジェクトしてimportし、
+configureからJavaプロジェクトに変換した。
+
+lib,hadoop/lib,okuyamaFuse/libのjarをimportしてエラーをほぼ解消
+okuyamaFuseのBufferedDataStoredMap.javaに2箇所エラーが残る。
+コメントアウトで回避
+
+build.xmlにてdefault targetに設定されているpackageが存在しないとのエラーがでる
+targetととしてcompileを指定をして回避
+
+antより
+ant build
+ant serverrun
+ant testset
+ant testget
+を実行して成功
